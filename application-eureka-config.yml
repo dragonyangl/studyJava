@@ -19,7 +19,7 @@ eureka:
   instance:
     hostname: localhost
 
-
+---
 #配置test环境
 spring:
   profiles: test
