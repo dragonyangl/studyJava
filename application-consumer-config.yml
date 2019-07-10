@@ -1,0 +1,39 @@
+#配置dev环境
+spring:
+  profiles: dev
+  application:
+    name: ylfoodmsc-consumer-depart
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+#开启Feign对Hystrix的支持
+feign:
+  hystrix:
+    enabled: true
+
+
+#配置test环境
+spring:
+  profiles: test
+  application:
+    name: ylfoodmsc-provider-depart
+
+
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+
+#开启Feign对Hystrix的支持
+feign:
+  hystrix:
+    enabled: true

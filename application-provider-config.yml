@@ -1,0 +1,50 @@
+#配置dev环境
+spring:
+  profiles: dev
+  application:
+    name: ylfoodmsc-provider-depart
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql:///test?useSSL=false&serverTimezone=Hongkong&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password:
+
+
+server:
+  port: 8084
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+
+
+#配置test环境
+spring:
+  profiles: test
+  application:
+    name: ylfoodmsc-provider-depart
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql:///test?useSSL=false&serverTimezone=Hongkong&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password:
+
+
+server:
+  port: 8084
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
